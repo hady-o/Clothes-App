@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.userhome.InfoFragment">
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+
+            android:background="@drawable/bar_shape"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/person_info"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:textSize="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                />
+            <ImageView
+                android:id="@+id/editBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_marginStart="@dimen/_20sdp"
+                android:src="@drawable/ic_baseline_edit_24" />
+            <ImageView
+                android:id="@+id/deleteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:src="@drawable/ic_baseline_delete_24" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?actionBarSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" >
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:src="@mipmap/ic_person_image"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:gravity="center">
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="name"
+                    android:textSize="@dimen/_30sdp"
+                    android:enabled="false"
+                    android:textColor="@color/light_blue"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:id="@+id/attend"
+                    android:layout_width="@dimen/_30sdp"
+
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/ic_baseline_add_task_24"/>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/_5sdp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Phone"
+                    android:textSize="@dimen/_25sdp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="5"
+                    android:enabled="false"
+                    android:inputType="number"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_25sdp"
+                    android:textColor="@color/light_blue"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/_5sdp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Salary"
+                    android:textSize="@dimen/_25sdp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/salary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="50 EGP"
+                    android:inputType="number"
+                    android:enabled="false"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_25sdp"
+                    android:textColor="@color/light_blue"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/_5sdp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Rest"
+                    android:textSize="@dimen/_25sdp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/rest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50 EGP"
+                    android:inputType="number"
+                    android:enabled="false"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_25sdp"
+                    android:textColor="@color/light_blue"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="@dimen/_50sdp"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <EditText
+                    android:id="@+id/takedMony"
+                    android:layout_width="@dimen/_100sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    tools:text="50"
+                    android:inputType="number"
+                    android:background="@drawable/back_shape"
+                    android:textSize="@dimen/_25sdp"
+                    android:textColor="@color/light_blue"/>
+
+                <Button
+                    android:id="@+id/take"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:background="@drawable/button_shape"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/take"
+                    android:textSize="@dimen/_13sdp"
+                    app:backgroundTint="@null" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
